@@ -40,6 +40,13 @@ public class Gra {
         if(!usedLetters.contains('_')) return true;
         return false;
     }
+    public boolean enterWord(String word){
+        if(word.equalsIgnoreCase(secretWord)) {
+            guessedState = word.toCharArray();
+            return true;
+        }
+        return false;
+    }
     public boolean isLost(){
         if(lives<=0) return true;
         return false;

@@ -44,5 +44,11 @@ public class ObslugaGryTest {
         for (char c : "qwertyuio".toCharArray()) game.guessLetter(c);
         assertTrue(game.isLost());
     }
+    @Test
+    public void odgadniecieHasla(){
+        Gra game = new Gra("cks");
+        assertTrue(game.enterWord("cks"));
+        assertTrue(game.isWon());
+    }
 
 }
