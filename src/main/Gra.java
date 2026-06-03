@@ -36,6 +36,10 @@ public class Gra {
         if(!isFound) lives--;
         return isFound;
     }
+    public boolean isWon(){
+        if(!usedLetters.contains('_')) return true;
+        return false;
+    }
 
     public int getLives(){
         return this.lives;
