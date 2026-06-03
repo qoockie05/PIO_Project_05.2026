@@ -8,7 +8,7 @@ public class Gra {
     public String secretWord;
     private int lives;
     private char[] guessedState;
-    private Set<Character> usedLetters;
+    final private Set<Character> usedLetters;
     private int wonNumber;
 
     public Gra(String word){
@@ -17,12 +17,13 @@ public class Gra {
         this.guessedState = new char[word.length()];
         Arrays.fill(guessedState,'_');
         this.usedLetters = new HashSet<>();
+        this.wonNumber = 0;
     }
-    public boolean guessLetter(char letter){
+    public void guessLetter(char letter){
         letter = Character.toUpperCase(letter);
         if(usedLetters.contains(letter)){
             System.out.println("Litera zostala juz podana, sprobuj jeszcze raz.");
-            return false;
+            return;
         }
         usedLetters.add(letter);
         boolean isFound = false;
@@ -34,10 +35,13 @@ public class Gra {
             }
         }
         if(!isFound) lives--;
-        return isFound;
     }
     public boolean isWon(){
-        if(!usedLetters.contains('_')) return true;
+        if(!usedLetters.contains('_')){
+            wonNumber++;
+            System.out.println("Wygrałeś partię, stan wygranych: "+ wonNumber);
+            return true;
+        }
         return false;
     }
     public boolean enterWord(String word){
@@ -48,7 +52,10 @@ public class Gra {
         return false;
     }
     public boolean isLost(){
-        if(lives<=0) return true;
+        if(lives<=0){
+            System.out.println("Gra skończona, przegrałeś");
+            return true;
+        }
         return false;
     }
     public int getLives(){

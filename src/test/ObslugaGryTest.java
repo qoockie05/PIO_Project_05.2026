@@ -50,5 +50,14 @@ public class ObslugaGryTest {
         assertTrue(game.enterWord("cks"));
         assertTrue(game.isWon());
     }
+    @Test
+    public void iloscWygranychGierWynosi2(){
+        Gra game = new Gra("cks");
+        assertTrue(game.enterWord("cks"));
+        assertTrue(game.isWon());
+        game = new Gra("ol");
+        assertTrue(game.enterWord("ol"));
+        assertTrue(game.isWon());
+    }
 
 }
