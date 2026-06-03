@@ -2,7 +2,7 @@ package src.main;
 
 public class Wisielec {
 
-    public String writeHangedMan(int lives) {
+    public String rysujWisielca(int lives) {
         return switch (lives) {
             case 9 -> """
                       +---+
