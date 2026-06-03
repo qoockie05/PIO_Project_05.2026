@@ -52,12 +52,13 @@ public class ObslugaGryTest {
     }
     @Test
     public void iloscWygranychGierWynosi2(){
-        Gra game = new Gra("cks");
-        assertTrue(game.enterWord("cks"));
-        assertTrue(game.isWon());
-        game = new Gra("ol");
-        assertTrue(game.enterWord("ol"));
-        assertTrue(game.isWon());
+        Gra game1 = new Gra("cks");
+        game1.enterWord("cks");
+        game1.updateWinCount();
+        Gra game2 = new Gra("ol");
+        game2.enterWord("ol");
+        game2.updateWinCount();
+        assertEquals(2, Gra.getWonNumber());
     }
 
 }

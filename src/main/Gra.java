@@ -9,7 +9,7 @@ public class Gra {
     private int lives;
     private char[] guessedState;
     final private Set<Character> usedLetters;
-    private int wonNumber;
+    private static int wonNumber;
 
     public Gra(String word){
         this.secretWord = word.toUpperCase();
@@ -17,7 +17,6 @@ public class Gra {
         this.guessedState = new char[word.length()];
         Arrays.fill(guessedState,'_');
         this.usedLetters = new HashSet<>();
-        this.wonNumber = 0;
     }
     public void guessLetter(char letter){
         letter = Character.toUpperCase(letter);
@@ -31,15 +30,13 @@ public class Gra {
             if(secretWord.charAt(i) == letter){
                 guessedState[i] = letter;
                 isFound = true;
-                break;
             }
         }
         if(!isFound) lives--;
     }
     public boolean isWon(){
         if(!usedLetters.contains('_')){
-            wonNumber++;
-            System.out.println("Wygrałeś partię, stan wygranych: "+ wonNumber);
+            System.out.println("Wygrałeś partię, stan pozostalych wygranych: "+ Gra.getWonNumber());
             return true;
         }
         return false;
@@ -60,5 +57,13 @@ public class Gra {
     }
     public int getLives(){
         return this.lives;
+    }
+    public void updateWinCount(){
+        if (isWon()) {
+            wonNumber++;
+        }
+    }
+    public static int getWonNumber() {
+        return wonNumber;
     }
 }
