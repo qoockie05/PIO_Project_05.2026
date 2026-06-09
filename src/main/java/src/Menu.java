@@ -19,7 +19,7 @@ public class Menu {
                 return choice;
             }
         }
-        catch (NumberFormatException e) {
+        catch (NumberFormatException ignored) {
         }
         return -1;
     }
