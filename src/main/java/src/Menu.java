@@ -2,7 +2,7 @@ package src;
 
 public class Menu {
 
-    public int parseChoice(String input) {
+    public int przetworzWybor(String input) {
         try {
             int choice = Integer.parseInt(input.trim());
             if (choice >= 1 && choice <= 3) {
