@@ -1,7 +1,7 @@
 package src;
 
 import org.junit.jupiter.api.Test;
-import src.main.Menu;
+import src.Menu;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
