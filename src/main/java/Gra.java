@@ -67,4 +67,10 @@ public class Gra {
     public static int getWonNumber() {
         return wonNumber;
     }
+    public void pokazBilans() {
+        System.out.println("Bilans:");
+        System.out.println("Wygrane gry: " + Gra.getWonNumber());
+        System.out.println("Pozostałe życia: " + lives);
+        System.out.println("Użyte litery: " + usedLetters);
+    }
 }

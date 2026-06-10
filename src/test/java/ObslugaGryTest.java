@@ -78,5 +78,11 @@ public class ObslugaGryTest {
         gra.guessLetter('z');
         assertArrayEquals(new char[]{'_', '_', '_'}, gra.getGuessedState());
     }
-
+    //jeden test dla poakz bilans w celu sprawdzenia czy sie wypisuje
+    @Test
+    public void wypisanieBilansu(){
+        Gra gra = new Gra("kot");
+        gra.guessLetter('k');
+        gra.pokazBilans();
+    }
 }
