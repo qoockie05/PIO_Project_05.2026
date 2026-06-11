@@ -85,6 +85,8 @@ public class Gra {
         System.out.println("Użyte litery: " + usedLetters);
     }
     public void printCurrentStateForWord(){
+        System.out.println(guessedState);
+
     }
 
     public void koniec() {
