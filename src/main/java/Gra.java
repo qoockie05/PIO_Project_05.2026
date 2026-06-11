@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -54,10 +53,7 @@ public class Gra {
     }
 
     public boolean isLost() {
-        if (lives <= 0) {
-            return true;
-        }
-        return false;
+        return lives <= 0;
     }
 
     public int getLives() {

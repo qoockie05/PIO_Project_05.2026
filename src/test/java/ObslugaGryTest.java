@@ -129,7 +129,6 @@ public class ObslugaGryTest {
     @Test
 
     public void wpisanieDanegoPostepuWZgadywance(){
-        int poprzedni = Gra.getWonNumber();
         Gra gra = new Gra("koteczek");
         gra.guessLetter('e');
         gra.printCurrentStateForWord();
