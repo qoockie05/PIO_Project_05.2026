@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,7 +23,7 @@ public class Gra {
     public void guessLetter(char letter) {
         letter = Character.toUpperCase(letter);
         if (usedLetters.contains(letter)) {
-            System.out.println("Litera zostala juz podana, sprobuj jeszcze raz.");
+            System.out.println("Litera " + letter+" zostala juz podana, sprobuj jeszcze raz.");
             return;
         }
         usedLetters.add(letter);
@@ -40,7 +41,7 @@ public class Gra {
         for (char c : guessedState) {
             if (c == '_') return false;
         }
-        System.out.println("Wygrałeś partię, stan pozostalych wygranych: " + Gra.getWonNumber());
+        System.out.println("Gratulacje! Odgadłeś hasło: " + secretWord.toLowerCase() +" Stan pozostałych wygranych: " +Gra.getWonNumber());
         return true;
     }
 
@@ -54,7 +55,6 @@ public class Gra {
 
     public boolean isLost() {
         if (lives <= 0) {
-            System.out.println("Gra skończona, przegrałeś");
             return true;
         }
         return false;
@@ -84,13 +84,14 @@ public class Gra {
         System.out.println("Pozostałe życia: " + lives);
         System.out.println("Użyte litery: " + usedLetters);
     }
+    public void printCurrentStateForWord(){
+    }
 
     public void koniec() {
         if (isWon()) {
-            System.out.println("Gratulacje! Odgadłeś hasło: " + secretWord);
             updateWinCount();
         } else if (isLost()) {
-            System.out.println("Przegrałaś! Hasło to: " + secretWord);
+            System.out.println("Przegrałeś! Hasło to: " + secretWord);
         }
     }
 }
