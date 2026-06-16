@@ -11,7 +11,7 @@ public class Gracz {
         while(true) {
             System.out.print("Podaj nick gracza: ");
             this.nick = scanner.nextLine().trim();
-            if (this.nick.length() > 0) {
+            if (!this.nick.isEmpty()) {
                 System.out.println("Hej " + this.nick + "!");
                 return;
             }

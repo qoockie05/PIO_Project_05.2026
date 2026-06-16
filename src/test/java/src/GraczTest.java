@@ -6,7 +6,7 @@ import java.io.ByteArrayInputStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Test_gracz {
+public class GraczTest {
 
     @Test
     void powinnoWczytacPoprawnyNick() {

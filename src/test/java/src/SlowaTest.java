@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class Test_slowa {
+public class SlowaTest {
 
     @Test
     void powinnoLosowacSlowoZListy() {
