@@ -1,9 +1,5 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-final class Main {
+package src;
+final class MainGracz {
     public static void main(String[] args) {
         Gracz gracz = new Gracz();
         gracz.wczytajNick();

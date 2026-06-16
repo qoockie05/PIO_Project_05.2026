@@ -1,6 +1,10 @@
+package src;
+
 import org.junit.jupiter.api.Test;
+
 import java.io.ByteArrayInputStream;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test_gracz {
 

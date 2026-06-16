@@ -1,3 +1,5 @@
+package src;
+
 public class Wisielec {
 
     public String rysujWisielca(int lives) {
