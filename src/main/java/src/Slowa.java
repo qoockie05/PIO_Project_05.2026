@@ -31,4 +31,10 @@ public class Slowa {
     public boolean usunSlowo(String slowo) { 
         return listaSlow.remove(slowo);  
     } 
+
+    public void wyswietlWszystkie() { 
+        for (int i = 0; i < listaSlow.size(); i++) { 
+            System.out.println((i + 1) + ". " + listaSlow.get(i)); 
+        } 
+    } 
 }
