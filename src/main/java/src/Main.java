@@ -79,7 +79,7 @@ public class Main {
                         switch(opcjaSlownika) {
                             case "1" -> {
                                 System.out.println("\nAktualne słowa w bazie:");
-                                // TODO 1: do wywołania metoda wyświetlająca wszystkie słowa
+                                slowa.wyswietlWszystkie(); 
                             }
                             case "2" -> {
                                 System.out.print("\nPodaj nowe słowo do dodania: ");
@@ -108,7 +108,13 @@ public class Main {
                                     System.out.println("Błąd! Nie wpisano słowa.");
                                 }
                                 else {
-                                    // TODO 3: do wywołania metoda usuwająca
+                                    boolean usunieto = slowa.usunSlowo(slowoDoUsuniecia); 
+                                    if (usunieto) { 
+                                        System.out.println("Sukces! Usunięto słowo: " + slowoDoUsuniecia); 
+
+                                    } else { 
+                                        System.out.println("Błąd! Nie znaleziono słowa '" + slowoDoUsuniecia + "' w bazie."); 
+                                    } 
                                 }
                             }
                             case "4" -> {
