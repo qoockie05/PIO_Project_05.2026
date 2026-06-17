@@ -41,4 +41,12 @@ public class SlowaTest {
         String wynik = slowa.losujSlowo();
         assertFalse(wynik.isEmpty());
     }
+    @Test
+
+    void powinnoDodacNoweSlowoDoBazy() {
+        Slowa slowa = new Slowa();
+        boolean czyDodano = slowa.dodajSlowo("interfejs");
+        assertTrue(czyDodano);
+        assertTrue(slowa.czyZawiera("interfejs"));
+    }
 }
